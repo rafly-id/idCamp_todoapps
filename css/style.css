@@ -1,187 +1,170 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    font-family: Raleway, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html,
+body {
+  font-family: Raleway, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    background: #5F30E2;
-    padding: 16px;
-    color: white;
+  background: #5f30e2;
+  padding: 16px;
+  color: white;
+  text-align: center;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .wrapper .container {
-    width: 1024px;
-    border-radius: 8px;
-    margin: 16px;
-    background: #F8F9FA;
-    padding: 16px;
-    flex-grow: 1;
-    height: fit-content;
-}
-
-
-.item {
-    border-radius: 16px;
-    margin-top: 16px;
-    padding: 12px 24px 12px 24px;
-    background: white;
-    display: flex;
-    align-items: center;
-}
-
-.item > .inner h2 {
-    margin-bottom: unset;
-}
-
-.item > .inner p {
-    margin-top: 5px;
+  width: 1024px;
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 16px;
+  background: #f8f9fa;
+  padding: 16px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
 }
 
 .form {
-    display: flex;
-    padding: 16px;
-    flex-direction: column;
-    height: 300px;
-    border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 16px;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
 }
 
 .form-group label {
-    margin-bottom: 4px;
-    font-size: 18px;
-    font-weight: lighter;
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 300;
 }
 
-.shadow {
-    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+input[type="text"],
+input[type="date"] {
+  font-family: Raleway, sans-serif;
+  background: #f5f1ff;
+  border: 2px solid #9475ea;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 18px;
 }
 
-input[type=text], input[type=date] {
-    font-family: Raleway, sans-serif;
-    background: #F5F1FF;
-    border: 2px solid #9475EA;
-    border-radius: 8px;
-    padding: 16px;
-    box-sizing: border-box;
-    margin-bottom: 8px;
-    font-size: 24px;
+input[type="text"]:focus,
+input[type="date"]:focus,
+.btn-submit:focus {
+  outline: none;
 }
 
 .btn-submit {
-    width: fit-content;
-    font-family: Raleway, sans-serif;
-    border-radius: 16px;
-    padding: 12px 24px;
-    border: 2px solid #5F30E2;
-    color: black;
-    font-size: 24px;
-    margin-top: auto;
-    align-self: flex-end;
-    cursor: pointer;
+  align-self: flex-end;
+  margin-top: auto;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 2px solid #5f30e2;
+  border-radius: 16px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
 }
 
 .btn-submit:hover {
-    background: #5F30E2;
-    color: white;
+  background: #5f30e2;
+  color: white;
 }
 
-input[type=text], input[type=date], .btn-submit:focus {
-    outline: none;
+/* Daftar tugas */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 16px 32px;
+  max-width: 1024px;
+  width: 100%;
 }
 
-.text-center {
-    text-align: center;
+.todo-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.form-title {
-    margin: auto 0;
+/* Ikon */
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-right: 12px;
+  flex-shrink: 0;
+  transition: transform 0.1s;
 }
 
-.check-button {
-    width: 40px;
-    height: 40px;
-
-    background: url('../assets/check-outline.svg');
-    background-size: contain;
-    margin-left: auto;
-    cursor: pointer;
-    border: none;
+.icon:hover {
+  transform: scale(1.1);
 }
 
-.check-button:hover {
-    background: url('../assets/check-solid.svg');
-    background-size: contain;
+.icon-trash {
+  margin-left: auto;
+  margin-right: 0;
 }
 
-.trash-button {
-    width: 40px;
-    height: 40px;
-
-    background: url('../assets/trash-outline.svg');
-    background-size: contain;
-    margin-left: 16px;
-    cursor: pointer;
-    border: none;
+.icon-undo {
+  margin-left: auto;
+  margin-right: 0;
 }
 
-.trash-button:hover {
-    background: url('../assets/trash-fill.svg');
-    background-size: contain;
+.icon-trash-perm {
+  margin-left: 10px;
 }
 
-.undo-button {
-    width: 40px;
-    height: 40px;
-
-    background: url('../assets/undo-ouline.svg');
-    background-size: contain;
-    margin-left: auto;
-    cursor: pointer;
-    border: none;
+/* Teks tugas */
+.todo-text {
+  font-size: 16px;
+  color: #333;
 }
 
-.undo-button:hover {
-    background: url('../assets/undo-ouline.svg');
-    background-size: contain;
+.todo-text.completed {
+  text-decoration: line-through;
+  color: #888;
 }
 
-.check-button:focus, .trash-button {
-    outline: none;
+#todo-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .wrapper .container {
+    margin: 0;
+    width: 100%;
+  }
 
-@media only screen and (max-width: 1024px) {
-    .wrapper {
-        margin: 0;
-    }
+  .todo-list {
+    margin: 0 8px 24px;
+  }
 
-    .wrapper .container {
-        width: 100%;
-    }
-
-    .list-item {
-        width: 90%;
-    }
-
-    .form {
-        width: 100%;
-    }
+  .todo-item {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
